@@ -11,11 +11,10 @@
                 <h1>{{ myFullName }}</h1>
             </header>
             <main>
-                <p>Pressure Value: <strong>{{ pressureMonitorValue }}</strong></p>
-                <input v-model="pressureMonitorValue" type="range" min="0" max="100" >
-                <div v-for="pressureLevel in pressureMonitorLevels":key="pressureLevel.id"
-                :class="['indicator', pressureLevel.color, { 'inactive': !isActive(pressureLevel) }]">
-                    {{ pressureLevel.label }}
+                <p>PressureValue: <strong>{{pressureMonitorValue}}</strong></p>
+                <input v-model="pressureMonitorValue" type="range" min="0" max="100">
+                <div v-for="pressureLevel in pressureMonitorLevels":key="pressureLevel.id":class="['indicator',pressureLevel.color,{'inactive': !isActive(pressureLevel)}]">
+                    {{pressureLevel.label}}
                 </div>
             </main>
             <footer>
